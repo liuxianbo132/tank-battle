@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang='zh-CN'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>坦克大战 - Tank Battle</title>
+  <link rel='stylesheet' href='style.css'>
+</head>
+<body>
+  <div id='container'>
+    <div id='hud'>
+      <div id='score-panel'>
+        <span class='label'>分数</span>
+        <span id='score' class='value'>0</span>
+      </div>
+      <div id='health-panel'>
+        <span class='label'>血量</span>
+        <div id='health-bar-outer'>
+          <div id='health-bar'></div>
+        </div>
+      </div>
+      <div id='enemy-panel'>
+        <span class='label'>剩余敌人</span>
+        <span id='enemy-count' class='value'>3</span>
+      </div>
+      <div id='ai-status'>
+        <span id='ai-dot'></span>
+        <span id='ai-text'>AI 就绪</span>
+      </div>
+    </div>
+    <canvas id='gameCanvas'></canvas>
+    <div id='overlay' class='hidden'>
+      <h1 id='overlay-title'></h1>
+      <p id='overlay-subtitle'></p>
+      <button id='restart-btn'>重新开始</button>
+    </div>
+    <div id='api-config' class='hidden'>
+      <p>请输入 DeepSeek API Key（可选，不填则使用本地 AI）：</p>
+      <input type='password' id='api-key-input' placeholder='sk-...'>
+      <button id='api-save-btn'>保存并开始</button>
+      <button id='api-skip-btn'>跳过，使用本地 AI</button>
+    </div>
+  </div>
+  <div id='controls-hint'>
+    <span><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> 移动</span>
+    <span><kbd>鼠标</kbd> 瞄准</span>
+    <span><kbd>左键</kbd> 射击</span>
+  </div>
+  <script src='game.js'></script>
+</body>
+</html>
