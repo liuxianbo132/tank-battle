@@ -1,11 +1,11 @@
-﻿[build]
-  command = " \
- publish = \public\
+[build]
+  command = "# no build command"
+  publish = "public"
 
 [functions]
- directory = \netlify/functions\
+  directory = "netlify/functions"
 
 [[redirects]]
- from = \/api/*\
- to = \/.netlify/functions/:splat\
- status = 200
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
